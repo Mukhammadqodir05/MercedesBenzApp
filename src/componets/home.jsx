@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 
 import { Autoplay, Pagination } from 'swiper/modules';
 
- function Home() {
+ const Home = () => {
   return (
     <main className='flex w-full h-screen items-center'>
       <Swiper
