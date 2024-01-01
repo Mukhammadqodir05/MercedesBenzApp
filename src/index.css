@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (min-width: 889px) {
+  .dataDisplay {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+         .dataDisplay {
+           grid-template-columns: repeat(2, 1fr); 
+
+         }
+       }
+
+@media (min-width: 1224px) {
+.dataDisplay {
+         grid-template-columns: repeat(3, 1fr);     
+}
+
+}
+.bg{
+  background-image:linear-gradient(to right bottom,#0d1623, #0e1e38, #16244d, #262961, #573eab);
+}
+
+.bg2{
+  background-image:linear-gradient(to right top,#0d1623, #0e1e38, #16244d, #262961, #573eab);
+}
+
+/* Dropdown menu */
+.dropdown{
+  animation: rotateMenu 500ms ease-in-out forwards;
+  transform-origin: top center;
+}
+  
+@keyframes rotateMenu {
+  0% {
+      transform: rotateX(-90deg)
+  }
+  70% {
+      transform: rotateX(20deg) 
+  }
+  100% {
+      transform: rotateX(0deg) 
+  }
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
