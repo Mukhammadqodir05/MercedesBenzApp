@@ -9,7 +9,7 @@ const App = () => {
   return (
   <main className='text-white'> 
      <Navbar />
-     <Home />
+     {/* <Home /> */}
      <Sedans_wagons/>
      <SUVs />
      <ConvertiblesRoadsters />
