@@ -17,7 +17,6 @@ const ConvertiblesRoadsters = () => {
                 <h3 className='font-medium border-cyan-500 p-2 font-serif text-l border rounded-full text-center'>
                   {product.productName}
                 </h3>
-                <h3 className='font-light'>{product.productPrice}</h3>
               </div>
               <img className='max-w-[450px] md:ml-10 w-full' src={product.productImage} alt={product.productName} />
               <div className='md:pl-10 max-w-[550px] mt-5 w-full space-y-[0px]'>

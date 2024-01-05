@@ -6,54 +6,56 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
 
-import E_sedan1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/E_sedan1.webp'
-import E_sedan2 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/E_sedan2.webp'
-import irisBlack from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisBlack.png'
-import irisWhite from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisWhite.png'
-import irisBlue from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisBlue.png'
-import irisSilver from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisSilver.png'
-import irisGray from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisGray.png'
-import irisDiamond from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisDiamond.png'
-import irisRed from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisRed.png'
+import Wagon1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon1.webp'
+import Wagon2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon2.webp'
+import irisBlack from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlack.png'
+import irisDiamond from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisDiamond.png'
+import irisWhite from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisWhite.png'
+import irisBlue from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlue.png'
+import irisSilver from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisSilver.png'
+import irisGray from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisGray.png'
+import irisCirrusSilver from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisCirrusSilver.png'
+import irisRed from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisRed.png'
 
 // Performance
-import performance1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/performance/performance1.webp'
-import performance2 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/performance/performance2.webp'
-import performance3 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/performance/performance3.webp'
-import performance4 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/performance/performance4.webp'
+import performance1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/performance/performance1.webp'
+import performance2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/performance/performance2.webp'
+import performance3 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/performance/performance3.webp'
+import performance4 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/performance/performance4.webp'
 
 // Design
-import design1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/design/design1.webp'
-import design2 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/design/design2.webp'
-import design3 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/design/design3.webp'
-import design4 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/design/design4.webp'
+import design1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/design/design1.webp'
+import design2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/design/design2.webp'
+import design3 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/design/design3.webp'
+import design4 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/design/design4.webp'
 
 // Luxury
-import luxury1  from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/luxury/luxury1.webp'
-import luxury2  from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/luxury/luxury2.webp'
-import luxury3  from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/luxury/luxury3.webp'
-import luxury4  from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/luxury/luxury4.webp'
+import luxury1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/luxury/luxury1.webp'
+import luxury2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/luxury/luxury2.webp'
+import luxury3 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/luxury/luxury3.webp'
+import luxury4 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/luxury/luxury4.webp'
 
-// Multimedia
-import multimedia1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/multimedia/multimedia1.webp'
-import multimedia2 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/multimedia/multimedia2.webp'
-import multimedia3 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/multimedia/multimedia3.webp'
-import multimedia4 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/multimedia/multimedia4.webp'
+// Media
+import multimedia1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/media/multimedia1.webp'
+import multimedia2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/media/multimedia2.webp'
+import multimedia3 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/media/multimedia3.webp'
+import multimedia4 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/media/multimedia4.webp'
 
 // Safety
-import safety1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/safety/safety1.webp'
-import safety2 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/safety/safety2.webp'
-import safety3 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/safety/safety3.webp'
-import safety4 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/safety/safety4.webp'
+import safety1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/safety/safety1.webp'
+import safety2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/safety/safety2.webp'
+import safety3 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/safety/safety3.webp'
+import safety4 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/safety/safety4.webp'
 
 // Accessories
-import accessories1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/accessories/accessory1.webp'
-import accessories2 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/accessories/accessory2.webp'
-import accessories3 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/accessories/accessory3.webp'
-import accessories4 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/accessories/accessory4.webp'
+import accessories1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/accessories/accessory1.webp'
+import accessories2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/accessories/accessory2.webp'
+import accessories3 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/accessories/accessory3.webp'
+import accessories4 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/accessories/accessory4.webp'
 
 
-const E_ClassSedan = () => {
+
+const E_classWagon = () => {
   const [showPerformanceImages, setShowPerformanceImages] = useState(false);
   const [showDesignImages, setShowDesignImages] = useState(false);
   const [showLuxuryImages, setShowLuxuryImages] = useState(false);
@@ -67,8 +69,6 @@ const E_ClassSedan = () => {
   const toggleMultimediaImages = () => setShowMultimediaImages(!showMultimediaImages)
   const toggleSafetyImages = () =>  setShowSafetyImages(!showSafetyImages)
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
-
-
 
   return (
     <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden lg:mt-[-50px]'>
@@ -85,41 +85,41 @@ const E_ClassSedan = () => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-           <SwiperSlide><img src={irisBlack} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisWhite} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisSilver} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisGray} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisDiamond} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisRed} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisBlack} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisWhite} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisSilver} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisDiamond} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisRed} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisCirrusSilver} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={irisGray} alt="" /></SwiperSlide>
       </Swiper>
 
-
-     <div className='flex flex-col gap-2 lg:gap-40 lg:grid lg:grid-cols-2'>
+      <div className='flex flex-col gap-2 lg:gap-40 lg:grid lg:grid-cols-2'>
           <div className='flex text-center text-2xl font-medium'>
             <h1>2023-</h1>
-            <h1>AMG E 53 Sedan</h1>
+            <h1>E 450 4MATIC All-Terrain Wagon</h1>
           </div>
-         <h1 className='text-center text-2xl font-light'>$81,300 * MSRP</h1>
+         <h1 className='text-center text-2xl font-light'>$71,000 * MSRP</h1>
       </div>
        <div className='flex mt-3 border-t max-w-[1200px] border w-full border-gray-300'></div>
       
        <div className='lg:grid-cols-2 lg:grid flex items-center flex-col w-full max-w-[1100px]'>
        <div className='md:max-w-[800px] lg:max-w-[500px] justify-center items-center'>
-         <img  src={E_sedan1} alt="" />
-         <img src={E_sedan2} alt="" />
+         <img  src={Wagon1} alt="" />
+         <img src={Wagon2} alt="" />
        </div>
        <div className='flex flex-col md:max-w-[800px] lg:max-w-[460px] lg:mt-[70px] mt-[30px] rounded-md w-full bg-[#f3e6e6] pb-5 p-3'>
          <h1 className='text-center text-xl font-light font-mono'>Feature Highlights</h1>
           <div className='flex flex-col space-y-3 mt-2 p-2 '>
              <div className='flex justify-between'>
                 <span className='font-light'>Passenger capacity</span>
-                <span className='font-bold'>5</span>
+                <span className='font-bold'>7</span>
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
                 <span className='font-light'>Power</span>
-                <span className='font-bold'>429 hp @ 6,100 rpm</span>
+                <span className='font-bold'>362 hp @ 5,500-6,100 rpm</span>
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
@@ -129,12 +129,12 @@ const E_ClassSedan = () => {
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
                 <span className='font-light'>Highway fuel economy</span>
-                <span className='font-bold'>29 mpg†</span>
+                <span className='font-bold'>28 mpg†</span>
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
                 <span className='font-light'>Cargo capacity</span>
-                <span className='font-bold'>13.1 cu ft</span>
+                <span className='font-bold'>35.0-64.0 cu ft</span>
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
@@ -144,22 +144,22 @@ const E_ClassSedan = () => {
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
                 <span className='font-light'>Transmission</span>
-                <span className='font-bold'>AMG SPEEDSHIFT® 9-speed</span>
+                <span className='font-bold'>9G-TRONIC 9-speed</span>
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
                 <span className='font-light'>Acceleration</span>
-                <span className='font-bold'>4.4 sec 0-60 mph **</span>
+                <span className='font-bold'>5.3 sec 0-60 mph **</span>
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
                 <span className='font-light'>Curb weight</span>
-                <span className='font-bold'>4,376 lbs</span>
+                <span className='font-bold'>TBA</span>
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
                 <span className='font-light'>Wheels</span>
-                <span className='font-bold'>19-inch  AMG® twin 5-spoke </span>
+                <span className='font-bold'>19-inch multispoke </span>
              </div>
              <div className='border-b w-full border-black'></div>
             </div>
@@ -180,7 +180,7 @@ const E_ClassSedan = () => {
               <div className='grid gap-5  grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={performance1} alt="" />
-                    <h1 className='text-center font-bold'>AMG-enhanced 3.0L inline-6 turbo engine with hybrid assist</h1>
+                    <h1 className='text-center font-bold'>3.0L inline-6 turbo engine with mild hybrid drive</h1>
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={performance2} alt="" />
@@ -188,11 +188,11 @@ const E_ClassSedan = () => {
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={performance3} alt="" />
-                    <h1 className='text-center font-bold'>NANOSLIDE cylinder wall technology</h1>
+                    <h1 className='text-center font-bold'>ECO Start/Stop system</h1>
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={performance4} alt="" />
-                    <h1 className='text-center font-bold'>ECO Start/Stop system</h1>
+                    <h1 className='text-center font-bold'>4MATIC all-wheel drive</h1>
                 </div>
               </div>
             )}
@@ -210,19 +210,19 @@ const E_ClassSedan = () => {
               <div className='grid gap-5 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={design1} alt="" />
-                    <h1 className='text-center font-bold'>The emotion of intelligence</h1>
+                    <h1 className='text-center font-bold'>The versatility of intelligence</h1>
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={design2} alt="" />
-                    <h1 className='text-center font-bold'>Technology with a human touch</h1>
+                    <h1 className='text-center font-bold'>Sensual, sculptural cabin design</h1>
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={design3} alt="" />
-                    <h1 className='text-center font-bold'>Deletion of decklid badges</h1>
+                    <h1 className='text-center font-bold'>All-LED exterior lighting</h1>
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={design4} alt="" />
-                    <h1 className='text-center font-bold'>Sensual, sculptural cabin design</h1>
+                    <h1 className='text-center font-bold'>Panorama roof</h1>
                 </div>
               </div>
             )}
@@ -252,7 +252,7 @@ const E_ClassSedan = () => {
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={luxury4} alt="" />
-                    <h1 className='text-center font-bold'>1 year of Mercedes me connect services</h1>
+                    <h1 className='text-center font-bold'>3-zone automatic climate control</h1>
                 </div>
               </div>
             )}
@@ -334,7 +334,7 @@ const E_ClassSedan = () => {
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={accessories2} alt="" />
-                    <h1 className='text-center font-bold'>AMG Crest LED logo projectors</h1>
+                    <h1 className='text-center font-bold'>LED logo projectors</h1>
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={accessories3} alt="" />
@@ -342,18 +342,15 @@ const E_ClassSedan = () => {
                 </div>
                 <div className='space-y-2'>
                     <img className='rounded-md' src={accessories4} alt="" />
-                    <h1 className='text-center font-bold'>Comfort Box</h1>
+                    <h1 className='text-center font-bold'>All-season front and rear floor mats, black rubber</h1>
                 </div>
               </div>
             )}
             <div className='border-b w-full border-black'></div>
           </div>
         </div>
-
-  </main>
+   </main>
   )
 }
 
-
-
-export default E_ClassSedan
+export default E_classWagon

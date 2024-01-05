@@ -139,7 +139,7 @@ const C_ClassSedan = () => {
              </div>
              <div className='border-b w-full border-black'></div>
              <div className='flex justify-between'>
-                <span className='font-light'>Auto transmission</span>
+                <span className='font-light'>Transmission</span>
                 <span className='font-bold'>AMG SPEEDSHIFT®</span>
              </div>
              <div className='border-b w-full border-black'></div>
