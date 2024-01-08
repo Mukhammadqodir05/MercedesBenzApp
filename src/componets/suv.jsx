@@ -1,6 +1,5 @@
 import React from 'react'
 import blackBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/blackBg.png'
-import bgRoad1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/bgRoad1.jpg'
 import SedanBlackBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanBlackBg.png'
 
 const Suv = () => {

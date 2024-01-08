@@ -72,9 +72,11 @@
   align-items: center;
 }
 
+
+
 .suvBg{
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   background-image: url("public/bgRoad1.jpg");
+   background-image: url("/src/CarBackgroundDetails/C_classSedan/SedanImages/bgRoad1.jpg");
 }
