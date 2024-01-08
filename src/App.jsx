@@ -3,7 +3,7 @@ import Navbar from './componets/navbar'
 import C_classSedan from './componets/c_classSedan'
 import EClassSedan from './componets/eClassSedan'
 import EclassWagon from './componets/e_classWagon'
-import EQS_sedan from './componets/EQS_sedan'
+import EQS_sedan from './componets/eqs_sedan'
 import Maybach_sedan from './componets/maybach_sedan'
 
 
