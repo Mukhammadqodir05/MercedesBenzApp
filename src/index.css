@@ -72,6 +72,9 @@
   align-items: center;
 }
 
-
-
-
+.suvBg{
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url("public/bgRoad1.jpg");
+}

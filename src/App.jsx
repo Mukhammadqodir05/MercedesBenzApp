@@ -4,15 +4,17 @@ import Home from './componets/home'
 import Sedans_wagons from './componets/sedans_wagons'
 import SUVs from './componets/sUVs'
 import ConvertiblesRoadsters from './componets/convertiblesRoadsters'
+import Suv from './componets/suv'
 
 const App = () => {
   return (
   <main className='text-white'> 
      <Navbar />
      {/* <Home /> */}
-     <Sedans_wagons/>
+     {/* <Sedans_wagons/>
      <SUVs />
-     <ConvertiblesRoadsters />
+     <ConvertiblesRoadsters /> */}
+     <Suv />
   </main>
   )
 }
