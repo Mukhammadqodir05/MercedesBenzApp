@@ -1,6 +1,7 @@
 import React from 'react'
 import blackBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/blackBg.png'
 import bgRoad1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/bgRoad1.jpg'
+import SedanBlackBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanBlackBg.png'
 
 const Suv = () => {
   return (
@@ -12,7 +13,7 @@ const Suv = () => {
 
 
       <div className='hidden lg:flex'>
-         <img src={bgRoad1} alt="" />
+         <img src={SedanBlackBg} alt="" />
       </div> 
     </main>
   )
