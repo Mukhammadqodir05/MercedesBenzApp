@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import bgRoad1 from '/public/assets/bgRoad1.jpg'
+import bgRoad1 from '/src/assets/bgRoad1.jpg'
 import maybachBg2 from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisMango.png'
 import maybachBg from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/maybachBg.png'
 
@@ -25,7 +25,7 @@ const Maybach_sedan = () => {
          <img src={maybachBg2} alt="" />
       </div>  
       <div className='flex absolute flex-col mt-[450px] md:mt-[550px] gap-4 rounded-md md:gap-[30px] md:grid md:grid-cols-2 max-w-[600px] text-center'>
-            <Link className='border-gray-400 border whiteButton buttons md:max-w-[285px] text-xl text-black rounded-md p-2' to='/c_ClassSedan'>LEARN MORE</Link>
+            <Link className='border-gray-400 border whiteButton buttons md:max-w-[285px] text-xl text-black rounded-md p-2' to='/Maybach_Sclass'>LEARN MORE</Link>
             <Link className='border blackButton buttons md:max-w-[300px] text-xl text-white rounded-md p-2 ' to='/buy'>BUY NOW</Link>
       </div>
     </main>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import bgRoad1 from '/public/assets/road2.jpg'
+import bgRoad1 from '/src/assets/road2.jpg'
 import SedanBlackBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanWhiteBg.png'
 import CsedanBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/CsedanBg.png'
 

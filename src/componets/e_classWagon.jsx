@@ -1,5 +1,5 @@
 import React from 'react'
-import bgRoad2 from '/public/assets/road2.jpg'
+import bgRoad2 from '/src/assets/road2.jpg'
 import { Link } from 'react-router-dom'
 import WagonBg from '/src/CarBackgroundDetails/E_classWagon/WagonImages/WagonBg.png'
 import WagonBg2  from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlue.png'
@@ -27,7 +27,7 @@ const EclassWagon = () => {
       </div> 
      
       <div className='flex absolute flex-col mt-[450px] md:mt-[550px] gap-4 rounded-md md:gap-[30px] md:grid md:grid-cols-2 max-w-[600px] text-center'>
-            <Link className='border-gray-400 border whiteButton buttons md:max-w-[285px] text-xl text-black rounded-md p-2' to='/c_ClassSedan'>LEARN MORE</Link>
+            <Link className='border-gray-400 border whiteButton buttons md:max-w-[285px] text-xl text-black rounded-md p-2' to='/e_ClassWagon'>LEARN MORE</Link>
             <Link className='border blackButton buttons md:max-w-[300px] text-xl text-white rounded-md p-2 ' to='/buy'>BUY NOW</Link>
       </div>
     </main>
