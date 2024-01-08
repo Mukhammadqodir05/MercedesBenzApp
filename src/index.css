@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-snap-type: y mandatory;
+}
+
+.sections{
+  scroll-snap-align: start;
+}
+
 
 @media (min-width: 889px) {
   .dataDisplay {
@@ -25,8 +33,18 @@
 .dataDisplay {
          grid-template-columns: repeat(3, 1fr);     
 }
+}
 
+.blackButton{
+    background: rgba(0, 0, 0, 0.7);
+}
 
+.whiteButton{
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.navbar{
+  background: rgba(0, 0, 0, 0.9);
 }
 
 
@@ -57,7 +75,6 @@
 }
 
 
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -72,3 +89,69 @@
   align-items: center;
 }
 
+/* Buttons resizing */
+@media(min-width: 250px){
+  .buttons{
+     width: 200px;
+  }
+}
+
+@media(min-width: 300px){
+  .buttons{
+     width: 270px;
+  }
+}
+
+@media(min-width: 350px){
+  .buttons{
+     width: 300px;
+  }
+}
+
+@media(min-width: 400px){
+  .buttons{
+     width: 320px;
+  }
+}
+
+@media(min-width: 500px){
+  .buttons{
+     width: 420px;
+  }
+}
+
+@media(min-width: 750px){
+  .buttons{
+     width: 500px;
+  }
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e1d53;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.menu{
+  animation: rotateMenu 500ms ease-in-out forwards;
+  transform-origin: top center;
+}
+  

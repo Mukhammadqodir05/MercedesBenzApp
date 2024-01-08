@@ -1,20 +1,21 @@
 import React from 'react'
 import Navbar from './componets/navbar'
-import Home from './componets/home'
-import Sedans_wagons from './componets/sedans_wagons'
-import SUVs from './componets/sUVs'
-import ConvertiblesRoadsters from './componets/convertiblesRoadsters'
-import Suv from './componets/suv'
+import C_classSedan from './componets/c_classSedan'
+import EClassSedan from './componets/eClassSedan'
+import EclassWagon from './componets/e_classWagon'
+import EQS_sedan from './componets/EQS_sedan'
+import Maybach_sedan from './componets/maybach_sedan'
+
 
 const App = () => {
   return (
-  <main className='text-white'> 
+  <main> 
      <Navbar />
-     {/* <Home /> */}
-     {/* <Sedans_wagons/>
-     <SUVs />
-     <ConvertiblesRoadsters /> */}
-     <Suv />
+     <C_classSedan />
+     <EClassSedan />
+     <EclassWagon />
+     <EQS_sedan />
+     <Maybach_sedan />
   </main>
   )
 }
