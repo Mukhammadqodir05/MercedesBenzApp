@@ -24,23 +24,13 @@ html{
          }
        }
 
-@media (min-width: 1224px) {
-  .swiper {
-    width: 100% !important; /* Applying !important to override conflicting styles */
-    height: 600px !important;
-  }
-  
-.dataDisplay {
-         grid-template-columns: repeat(3, 1fr);     
-}
-}
-
-.blackButton{
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.whiteButton{
-  background: rgba(255, 255, 255, 0.7);
+       
+       .blackButton{
+         background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .whiteButton{
+          background: rgba(255, 255, 255, 0.7);
 }
 
 .navbar{
@@ -61,15 +51,15 @@ html{
   animation: rotateMenu 500ms ease-in-out forwards;
   transform-origin: top center;
 }
-  
+
 @keyframes rotateMenu {
   0% {
-      transform: rotateX(-90deg)
+    transform: rotateX(-90deg)
   }
   70% {
       transform: rotateX(20deg) 
-  }
-  100% {
+    }
+    100% {
       transform: rotateX(0deg) 
   }
 }
@@ -83,11 +73,22 @@ html{
 
 .swiper-slide {
   text-align: center;
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 1224px) {
+  .swiper {
+    width: 100% !important; /* Applying !important to override conflicting styles */
+    height: 800px !important;
+  }
+  
+.dataDisplay {
+         grid-template-columns: repeat(3, 1fr);     
+}
+}
+
 
 /* Buttons resizing */
 @media(min-width: 250px){
@@ -132,7 +133,7 @@ html{
 }
 
 ::-webkit-scrollbar-track {
-  background: #2e1d53;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #ffffff;
@@ -144,7 +145,7 @@ html{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 20px;
   border: 3px solid transparent;
   background-clip: content-box;

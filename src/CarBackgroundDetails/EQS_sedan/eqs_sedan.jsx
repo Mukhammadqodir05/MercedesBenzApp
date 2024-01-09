@@ -72,12 +72,12 @@ const EQS_sedan = () => {
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
 
   return (
-    <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden lg:mt-[-50px]'>
+    <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden md:mt-[-100px] lg:mt-[-150px]'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 7000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -670,7 +670,7 @@ const EQS_sedan = () => {
                   <li>GUARD 360° security system</li>
                   </ul>)}
                 </div>
-                <div onClick={toggleFeatures2} className='flex text-white justify-between lg:mt-[37px] mt-2 border rounded-md p-2 bg-[#8d2acf]'>
+                <div onClick={toggleFeatures3} className='flex text-white justify-between lg:mt-[37px] mt-2 border rounded-md p-2 bg-[#8d2acf]'>
                     <button>
                         {showFeatures3 ? 'Hide Features' : 'Show Features'}
                     </button>

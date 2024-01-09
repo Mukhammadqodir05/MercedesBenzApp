@@ -71,12 +71,12 @@ const C_ClassSedan = () => {
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
 
   return (
-    <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden lg:mt-[-50px]'>
+    <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden md:mt-[-100px] lg:mt-[-150px]'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 7000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -85,16 +85,17 @@ const C_ClassSedan = () => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide> <img className='w-full max-w-[1500px]' src={SedanBlackBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img className='w-full md:max-w-[1500px]' src={SedanWhiteBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img className='w-full md:max-w-[1500px]' src={SedanGrayMetalicBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img className='w-full md:max-w-[1500px]' src={SedanSilverBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img className='w-full md:max-w-[1500px]' src={SedanBlueBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={SedanBlackBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={SedanWhiteBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={SedanGrayMetalicBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={SedanSilverBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={SedanBlueBg} alt="" /></SwiperSlide>
       </Swiper>
+      
        <div className='flex flex-col gap-2 lg:gap-40 lg:grid lg:grid-cols-2'>
           <div className='flex text-center text-2xl font-medium'>
             <h1>2023-</h1>
-            <h1>𝑨𝑴𝑮 𝑪 𝟒𝟑 𝑺𝒆𝒅𝒂𝒏</h1>
+            <h1>AMG C 43 Sedan</h1>
           </div>
          <h1 className='text-center text-2xl font-light'>$59,900 * MSRP</h1>
       </div>
