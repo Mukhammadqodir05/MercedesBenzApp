@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import logo from '/src/assets/logo.png';
 import { FaBars, FaTimes  } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isClickOpen, setIsClickOpen] = useState(false);
-
-  const handleHover = () => {
-    setIsOpen(true);
-  };
-
-  const handleLeave = () => {
-    setIsOpen(false);
-  };
 
   const handleMenuClick = () => {
     setIsClickOpen((prev) => !prev);
@@ -24,35 +16,37 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='fixed flex justify-between  items-center w-full h-[100px] px-4 md:px-8'>
+    <nav className='fixed flex justify-between items-center w-full h-[100px] px-4 md:px-8'>
       <div onClick={handleLogoClick}>
         <img src={logo} alt='Tesla Logo' className='h-20 cursor-pointer' />
       </div>
 
-      <div className='flex items-center '>
-        <ul className='hidden md:flex  space-x-6 '>
-          <li className='hover:text-gray-400'>Vehicles</li>
-          <li className='hover:text-gray-400'>Vehicles</li>
-          <li className='hover:text-gray-400'>Vehicles</li>
-        </ul>
-      </div>
-
-      <div className='flex items-center'>
         <ul className='hidden md:flex space-x-6'>
-          <li>Shop</li>
-          <li>Account</li>
-          <li>
-            <button className='focus:outline-none ' onClick={handleMenuClick}>
-              <FaBars />
-            </button>
-          </li>
+            <li className='font-medium font-serif cursor-pointer'>
+                <Link to='main'>C Class Sedan</Link>
+            </li>
+            <li className='font-medium font-serif cursor-pointer'>
+                <Link to='eClass'>E Class Sedan</Link>
+            </li>
+            <li className='font-medium font-serif cursor-pointer'>
+                <Link to='eClassWagon'>E Class Wagon</Link>
+            </li>
+            <li className='font-medium font-serif cursor-pointer'>
+                <Link to='EQS'>EQS Sedan</Link>
+            </li>
+            <li className='font-medium font-serif cursor-pointer'>
+                <Link to='maybach'>Maybach Sedan</Link>
+            </li>
         </ul>
 
+      <div className='flex items-center mt-[-20px]'>
+          <button className='hidden md:flex'>Pricing</button>
+        
         <div
-          className='md:hidden cursor-pointer text-4xl '
+          className='md:hidden cursor-pointer text-4xl'
           onClick={handleMenuClick}
         >
-          {!isClickOpen ? <FaBars className='text-3xl' /> : ''}
+          {!isClickOpen ? <FaBars className='text-3xl text-white' /> : ''}
         </div>
 
         {isClickOpen && (
@@ -69,13 +63,23 @@ const Navbar = () => {
             </div>
 
             <ul className='p-12 py-16 space-y-5'>
-              <li>Model S</li>
-              <li>Model 3</li>
-              <li>Model X</li>
-              <li>Model Y</li>
-              <li>Energy</li>
-              <li>Shop</li>
-              <li>Account</li>
+                <li className='font-medium font-serif cursor-pointer'>
+                    <Link onClick={handleMenuClick} to='main'>C Class Sedan</Link>
+                </li>
+                <li className='font-medium font-serif cursor-pointer'>
+                    <Link onClick={handleMenuClick} to='eClass'>E Class Sedan</Link>
+                </li>
+                <li className='font-medium font-serif cursor-pointer'>
+                    <Link onClick={handleMenuClick} to='eClassWagon'>E Class Wagon</Link>
+                </li>
+                <li className='font-medium font-serif cursor-pointer'>
+                    <Link onClick={handleMenuClick} to='EQS'>EQS Sedan</Link>
+                </li>
+                <li className='font-medium font-serif cursor-pointer'>
+                    <Link onClick={handleMenuClick} to='maybach'>Maybach Sedan</Link>
+                </li>
+
+                <li className='font-medium font-serif cursor-pointer'>Pricing</li>
             </ul>
           </div>
         )}

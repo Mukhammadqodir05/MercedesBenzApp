@@ -7,7 +7,8 @@ import MyButton from './myButton'
 
 const EclassWagon = () => {
   return (
-    <main className='sections flex w-full h-screen justify-center items-center overflow-hidden'
+    <main name='eClassWagon'
+      className='sections flex w-full h-screen justify-center items-center overflow-hidden'
           style={{backgroundImage: `url(${bgRoad2})`,
              backgroundPosition: 'center',
              backgroundSize:'cover',

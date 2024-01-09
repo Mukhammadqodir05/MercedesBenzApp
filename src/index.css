@@ -2,49 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-snap-type: y mandatory;
 }
 
-.sections{
+.sections {
   scroll-snap-align: start;
 }
 
 
-@media (min-width: 889px) {
-  .dataDisplay {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.blackButton{
+  background: rgba(0, 0, 0, 0.7);
 }
 
-@media (min-width: 1024px) {
-         .dataDisplay {
-           grid-template-columns: repeat(2, 1fr); 
-
-         }
-       }
-
-       
-       .blackButton{
-         background: rgba(0, 0, 0, 0.7);
-        }
-        
-        .whiteButton{
-          background: rgba(255, 255, 255, 0.7);
+.whiteButton{
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .navbar{
   background: rgba(0, 0, 0, 0.9);
 }
 
-
-.bg{
-  background-image:linear-gradient(to right bottom,#0d1623, #0e1e38, #16244d, #262961, #573eab);
-}
-
-.bg2{
-  background-image:linear-gradient(to right top,#0d1623, #0e1e38, #16244d, #262961, #573eab);
-}
 
 /* Dropdown menu */
 .dropdown{
@@ -83,10 +61,7 @@ html{
     width: 100% !important; /* Applying !important to override conflicting styles */
     height: 800px !important;
   }
-  
-.dataDisplay {
-         grid-template-columns: repeat(3, 1fr);     
-}
+
 }
 
 
@@ -145,7 +120,7 @@ html{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #c422ffd2;
   border-radius: 20px;
   border: 3px solid transparent;
   background-clip: content-box;

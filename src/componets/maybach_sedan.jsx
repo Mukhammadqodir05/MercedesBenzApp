@@ -7,7 +7,8 @@ import MyButton from './myButton'
 
 const Maybach_sedan = () => {
   return (
-    <main className='sections flex flex-col w-full h-screen justify-center items-center overflow-hidden p-3'
+    <main name='maybach' 
+          className='sections flex flex-col w-full h-screen justify-center items-center overflow-hidden p-3'
           style={{backgroundImage: `url(${bgRoad1})`,
             backgroundPosition: 'center',
             backgroundSize:'cover',
@@ -24,12 +25,12 @@ const Maybach_sedan = () => {
       <div className='hidden lg:flex max-w-[1000px]'>
          <img src={maybachBg2} alt="" />
       </div>  
-      <div className='flex absolute flex-col mt-[450px] md:mt-[550px] gap-4 rounded-md md:gap-[30px] md:grid md:grid-cols-2 max-w-[600px] text-center'>
+      <div className='flex justify-center items-center  absolute flex-col mt-[450px] md:mt-[550px] gap-4 rounded-md md:gap-[30px] md:grid md:grid-cols-2 max-w-[600px] text-center'>
            <div className='border-gray-400 border whiteButton buttons md:max-w-[285px] text-xl text-black rounded-md p-2'>
                <MyButton to='/Maybach_Sclass'>LEARN MORE</MyButton>
            </div>
             <Link className='border blackButton buttons md:max-w-[300px] text-xl text-white rounded-md p-2 ' to='/buy'>BUY NOW</Link>
-      </div>
+         </div>
     </main>
   )
 }

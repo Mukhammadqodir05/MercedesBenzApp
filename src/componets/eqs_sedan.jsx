@@ -7,7 +7,8 @@ import MyButton from './myButton'
 
 const EQS_sedan = () => {
   return (
-    <main className='sections flex w-full h-screen justify-center items-center overflow-hidden'
+    <main name='EQS'
+      className='sections flex w-full h-screen justify-center items-center overflow-hidden'
         style={{backgroundImage: `url(${bgRoad2})`,
           backgroundPosition: 'center',
           backgroundSize:'cover',

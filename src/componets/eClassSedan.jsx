@@ -9,7 +9,8 @@ import MyButton from './myButton'
 const EClassSedan = () => {
 
   return ( 
-   <main className='sections flex w-full h-screen justify-center items-center overflow-hidden'
+   <main name='eClass'
+     className='sections flex w-full h-screen justify-center items-center overflow-hidden'
          style={{backgroundImage: `url(${bgRoad1})`,
             backgroundPosition: 'center',
             backgroundSize:'cover',
