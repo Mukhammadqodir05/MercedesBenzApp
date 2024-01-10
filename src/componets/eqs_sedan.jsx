@@ -31,7 +31,9 @@ const EQS_sedan = () => {
           <div className='border-gray-400 border whiteButton buttons md:max-w-[285px] text-xl text-black rounded-md p-2'>
                <MyButton to='/EQS_sedan'>LEARN MORE</MyButton>
            </div>
-            <Link className='border blackButton buttons md:max-w-[300px] text-xl text-white rounded-md p-2 ' to='/buy'>BUY NOW</Link>
+           <div className='border blackButton buttons md:max-w-[300px] text-xl text-white rounded-md p-2 '>
+               <MyButton to='/contact'>BUY NOW</MyButton>
+           </div>
       </div>
   </main>
   )

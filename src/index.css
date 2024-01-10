@@ -11,6 +11,7 @@ html {
 }
 
 
+
 .blackButton{
   background: rgba(0, 0, 0, 0.7);
 }
@@ -120,8 +121,8 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #c422ffd2;
-  border-radius: 20px;
+  background-color: #4c3b4fd2;
+  border-radius: 0px;
   border: 3px solid transparent;
   background-clip: content-box;
 }

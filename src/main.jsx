@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import Contact from './componets/contact.jsx'
 import './index.css'
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // Sedans
@@ -17,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
        <Routes>
             <Route path='/' element={<App />}/>
+            <Route path='/contact' element={<Contact />}/>
 
             {/* Sedan&Wagons */}
             <Route path='/c_ClassSedan' element={< C_ClassSedan/>}/>

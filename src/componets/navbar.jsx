@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import logo from '/src/assets/logo.png';
 import { FaBars, FaTimes  } from 'react-icons/fa';
@@ -39,9 +40,8 @@ const Navbar = () => {
             </li>
         </ul>
 
-      <div className='flex items-center mt-[-20px]'>
-          <button className='hidden md:flex'>Pricing</button>
-        
+       <div className='flex items-center mt-[-20px]'>
+          <RouterLink to='/contact' className='bg-white p-1 px-2 rounded-s rounded-e  hidden md:flex'>Contact 📞</RouterLink>
         <div
           className='md:hidden cursor-pointer text-4xl'
           onClick={handleMenuClick}
@@ -50,13 +50,10 @@ const Navbar = () => {
         </div>
 
         {isClickOpen && (
-          <div className='menu absolute md:hidden z-20 h-[400px] top-[0px] left-0 w-full navbar text-white py-4'>
-            <div
-              className='md:hidden cursor-pointer p-2 px-4 absolute z-10 text-4xl'
-              onClick={handleMenuClick}
-            >
+          <div onClick={handleMenuClick} className='menu absolute md:hidden z-20 h-[400px] top-[0px] left-0 w-full navbar text-white py-4'>
+            <div onClick={handleMenuClick} className='md:hidden cursor-pointer p-2 px-4 absolute z-10 text-4xl'>
               {isClickOpen ? (
-                <FaTimes className='text-3xl text-white' />
+                <FaTimes onClick={handleMenuClick} className='text-3xl text-white' />
               ) : (
                 ''
               )}
@@ -78,8 +75,9 @@ const Navbar = () => {
                 <li className='font-medium font-serif cursor-pointer'>
                     <Link onClick={handleMenuClick} to='maybach'>Maybach Sedan</Link>
                 </li>
-
-                <li className='font-medium font-serif cursor-pointer'>Pricing</li>
+                <li className='font-medium font-serif cursor-pointer'>
+                   <RouterLink to='/contact'> Contact 📞</RouterLink>  
+                </li>
             </ul>
           </div>
         )}
