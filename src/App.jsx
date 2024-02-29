@@ -8,7 +8,6 @@ import Maybach_sedan from './componets/maybach_sedan'
 import Skeleton from './skeleton'
 import Images from './BgImages'
 
-
 const App = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
