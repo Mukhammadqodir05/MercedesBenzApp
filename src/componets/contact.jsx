@@ -82,11 +82,11 @@ const Contact = () => {
          </div>
          <form className="contact-form mt-8 ">
          <label htmlFor="name">Name:</label>
-         <input type="text" id="name" name="name" required className="w-full p-2 border-solid border-2" />
+         <input placeholder='Name' type="text" id="name" name="name" required className="w-full p-2 border-solid border-2 text-black" />
          <label htmlFor="email" className="mt-4">Email:</label>
-         <input type="email" id="email" name="email" required className="w-full p-2 border-solid border-2" />
+         <input placeholder='Email' type="email" id="email" name="email" required className="w-full p-2 border-solid border-2 text-black" />
          <label htmlFor="message" className="mt-4">Message:</label>
-         <textarea id="message" name="message" rows="5" required className="w-full p-2 border-solid border-2"></textarea>
+         <textarea placeholder='Start typing here ...' id="message" name="message" rows="5" required className="w-full p-2 border-solid border-2 text-black"></textarea>
          <button type="submit" className="bg-black text-white p-2 px-7 mt-4 rounded-md">Send</button>
          </form>
          </section>
