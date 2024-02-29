@@ -10,6 +10,9 @@ This project showcases a user-friendly platform for buying and selling Mercedes 
 - Easy Contact: Seamlessly connect with sellers or buyers through our integrated messaging system, facilitating smooth communication and negotiation.
 - Smooth User Experience: Enjoy a visually appealing and intuitive browsing experience designed to cater to car enthusiasts and streamline the buying/selling process.
 
+## Screenshots
+![alt text](mercedes.png)
+
 ## Technologies Used
 - Frontend:
   - HTML: Structure the content of the website.
