@@ -19,7 +19,7 @@ const EclassWagon = () => {
         <p className='text-lg'>Starting at $71,000 *</p>
      </div>
 
-     <div className='lg:hidden'  >
+     <div className='lg:hidden' >
          <img src={WagonBg} alt="" />
       </div> 
 
