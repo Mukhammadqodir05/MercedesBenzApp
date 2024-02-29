@@ -22,7 +22,7 @@ This project showcases a user-friendly platform for buying and selling Mercedes 
 
 ## What I Learned
 Through developing this website, I gained valuable insights and skills in:
-- Creating a responsive and visually appealing user interface using React.js.
+- Creating a responsive and visually appealing user interface using React.js and Tailwind CSS.
 - Implementing dynamic routing and navigation with React Router.
 - Enhancing user experience through interactive features and smooth transitions.
 - Styling components efficiently with Tailwind CSS for a consistent design aesthetic.
