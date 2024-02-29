@@ -5,51 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
-
-import C_ClassSedan1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/C_ClassSedan1.webp'
-import C_ClassSedan2 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/C_ClassSedan2.webp'
-import SedanBlackBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanBlackBg.png'
-import SedanWhiteBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanWhiteBg.png'
-import SedanSilverBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanSilverBg.png'
-import SedanGrayMetalicBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanGrayMetalicBg.png'
-import SedanBlueBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanBlueBg.png'
-
-
-// Performance images
-import performance1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/performance/performance1.webp'
-import performance2 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/performance/performance2.webp'
-import performance3 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/performance/performance3.webp'
-import performance4 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/performance/performance4.webp'
-
-// Design imges
-import design1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/design/design1.webp'
-import design2 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/design/design2.webp'
-import design3 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/design/design3.webp'
-import design4 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/design/design4.webp'
-
-// Luxury images
-import luxury1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/luxury/luxury1.webp'
-import luxury2 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/luxury/luxury2.webp'
-import luxury3 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/luxury/luxury3.webp'
-import luxury4 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/luxury/luxury4.webp'
-
-// Multimedia images
-import multimedia1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/multimedia/multimedia1.webp'
-import multimedia2 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/multimedia/multimedia2.webp'
-import multimedia3 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/multimedia/multimedia3.webp'
-import multimedia4 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/multimedia/multimedia4.webp'
-
-// Accessories images
-import accessories1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/accessories/accessories1.webp'
-import accessories2 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/accessories/accessories2.webp'
-import accessories3 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/accessories/accessories3.webp'
-import accessories4 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/accessories/accessories4.webp'
-
-// Safety images
-import safety1 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/safety/safety1.webp'
-import safety2 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/safety/safety2.webp'
-import safety3 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/safety/safety3.webp'
-import safety4 from '/src/CarBackgroundDetails/C_classSedan/SedanImages/safety/safety4.webp'
+import { performanceImages, designImages, luxuryImages, multimediaImages, accessoriesImages, safetyImages, others } from '../../CClassImages';
 
 const C_ClassSedan = () => {
   const [showPerformanceImages, setShowPerformanceImages] = useState(false);
@@ -60,7 +16,6 @@ const C_ClassSedan = () => {
   const [showAccessoriesImages, setShowAccessoriesImages] = useState(false);
   const [showFeatures, setShowFeatures] = useState(false);
   const [showFeatures2, setShowFeatures2] = useState(false);
-
   const toggleFeatures = () => setShowFeatures(!showFeatures);
   const toggleFeatures2 = () => setShowFeatures2(!showFeatures2);
   const togglePerformanceImages = () => setShowPerformanceImages(!showPerformanceImages)
@@ -69,6 +24,8 @@ const C_ClassSedan = () => {
   const toggleMultimediaImages = () => setShowMultimediaImages(!showMultimediaImages)
   const toggleSafetyImages = () =>  setShowSafetyImages(!showSafetyImages)
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageLoaded2, setImageLoaded2] = useState(false);
 
   return (
     <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden md:mt-[-100px] lg:mt-[-150px]'>
@@ -85,11 +42,11 @@ const C_ClassSedan = () => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide> <img src={SedanBlackBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={SedanWhiteBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={SedanGrayMetalicBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={SedanSilverBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={SedanBlueBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={others.SedanBlackBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={others.SedanWhiteBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={others.SedanGrayMetalicBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={others.SedanSilverBg} alt="" /></SwiperSlide>
+        <SwiperSlide> <img src={others.SedanBlueBg} alt="" /></SwiperSlide>
       </Swiper>
       
        <div className='flex flex-col gap-2 lg:gap-40 lg:grid lg:grid-cols-2'>
@@ -103,8 +60,8 @@ const C_ClassSedan = () => {
      
       <div className='lg:grid-cols-2 lg:grid flex items-center flex-col w-full max-w-[1100px]'>
        <div className='md:max-w-[800px] lg:max-w-[500px] justify-center items-center'>
-         <img  src={C_ClassSedan1} alt="" />
-         <img src={C_ClassSedan2} alt="" />
+         <img  src={others.C_ClassSedan1} alt="" />
+         <img src={others.C_ClassSedan2} alt="" />
        </div>
        <div className='flex flex-col md:max-w-[800px] lg:max-w-[460px] lg:mt-[70px] mt-[30px] rounded-md w-full bg-[#f3e6e6] pb-5 p-3'>
          <h1 className='text-center text-xl font-light font-mono'>Feature Highlights</h1>
@@ -165,8 +122,9 @@ const C_ClassSedan = () => {
          
         <div className='flex flex-col justify-center items-center space-y-4 w-full mt-20 max-w-[1200px]'>
           <h1 className='text-2xl'> Essential Characteristics✔️</h1>
+       {/* Performance */}
           <div className='flex flex-col space-y-5 w-full mt-10 max-w-[1200px]' onClick={togglePerformanceImages}>
-            <div className='border-b w-full border-black'></div>
+            <div className='border-b w-full border-black'></div>     
             <div className='flex justify-between '>
               <h1 className=' font-serif'>Performance</h1>
               <button className='text-cyan-500 text-xl font-medium'>
@@ -176,19 +134,19 @@ const C_ClassSedan = () => {
             {showPerformanceImages && (
               <div className='grid gap-5  grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={performance1} alt="" />
+                    <img className='rounded-md' src={performanceImages.performance1} alt="" />
                     <h1 className='text-center font-bold'>Handcrafted AMG 2.0L inline-4 turbo with hybrid assist</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={performance2} alt="" />
+                    <img className='rounded-md' src={performanceImages.performance2} alt="" />
                     <h1 className='text-center font-bold'>Electric exhaust-gas turbocharger</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={performance3} alt="" />
+                    <img className='rounded-md' src={performanceImages.performance3} alt="" />
                     <h1 className='text-center font-bold'>9G-TRONIC automatic transmission</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={performance4} alt="" />
+                    <img className='rounded-md' src={performanceImages.performance4} alt="" />
                     <h1 className='text-center font-bold'>Two-stage direct injection</h1>
                 </div>
               </div>
@@ -196,6 +154,7 @@ const C_ClassSedan = () => {
             <div className='border-b w-full border-black'></div>
           </div>
 
+     {/* Design */}
           <div className='flex flex-col space-y-5 w-full mt-10 max-w-[1200px]' onClick={toggleDesignImages}>
             <div className='flex justify-between '>
               <h1 className=' font-serif'>Design</h1>
@@ -206,26 +165,27 @@ const C_ClassSedan = () => {
             {showDesignImages && (
               <div className='grid gap-5 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={design1} alt="" />
+                    <img className='rounded-md' src={designImages.design1} alt="" />
                     <h1 className='text-center font-bold'>Aggressively athletic aesthetics</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={design2} alt="" />
+                    <img className='rounded-md' src={designImages.design2} alt="" />
                     <h1 className='text-center font-bold'>Technology with a human touch</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={design3} alt="" />
+                    <img className='rounded-md' src={designImages.design3} alt="" />
                     <h1 className='text-center font-bold'>AMG interior with sport front seats</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={design4} alt="" />
+                    <img className='rounded-md' src={designImages.design4} alt="" />
                     <h1 className='text-center font-bold'>Brushed stainless steel pedals</h1>
                 </div>
               </div>
             )}
             <div className='border-b w-full border-black'></div>
           </div>
-
+  
+    {/* Luxury */}
           <div className='flex flex-col space-y-5 w-full mt-10 max-w-[1200px]' onClick={toggleLuxuryImages}>
             <div className='flex justify-between '>
               <h1 className=' font-serif'>Luxury</h1>
@@ -236,19 +196,19 @@ const C_ClassSedan = () => {
             {showLuxuryImages && (
               <div className='grid gap-5 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={luxury1} alt="" />
+                    <img className='rounded-md' src={luxuryImages.luxury1} alt="" />
                     <h1 className='text-center font-bold'>Power front seats with memory</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={luxury2} alt="" />
+                    <img className='rounded-md' src={luxuryImages.luxury2} alt="" />
                     <h1 className='text-center font-bold'>Heated front seats</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={luxury3} alt="" />
+                    <img className='rounded-md' src={luxuryImages.luxury3} alt="" />
                     <h1 className='text-center font-bold'>40/20/40-split folding rear seats</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={luxury4} alt="" />
+                    <img className='rounded-md' src={luxuryImages.luxury4} alt="" />
                     <h1 className='text-center font-bold'>1 year of Mercedes me connect services</h1>
                 </div>
               </div>
@@ -256,6 +216,7 @@ const C_ClassSedan = () => {
             <div className='border-b w-full border-black'></div>
           </div>
 
+       {/* Multimedia */}
           <div className='flex flex-col space-y-5 w-full mt-10 max-w-[1200px]' onClick={toggleMultimediaImages}>
             <div className='flex justify-between '>
               <h1 className='font-serif'>Multimedia</h1>
@@ -266,19 +227,19 @@ const C_ClassSedan = () => {
             {showMultimediaImages && (
               <div className='grid gap-5 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={multimedia1} alt="" />
+                    <img className='rounded-md' src={multimediaImages.multimedia1} alt="" />
                     <h1 className='text-center font-bold'>Mercedes-Benz User Experience (MBUX)</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={multimedia2} alt="" />
+                    <img className='rounded-md' src={multimediaImages.multimedia2} alt="" />
                     <h1 className='text-center font-bold'>12.3-inch digital instrument cluster</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={multimedia3} alt="" />
+                    <img className='rounded-md' src={multimediaImages.multimedia3} alt="" />
                     <h1 className='text-center font-bold'>11.9-inch touchscreen central multimedia display</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={multimedia4} alt="" />
+                    <img className='rounded-md' src={multimediaImages.multimedia4} alt="" />
                     <h1 className='text-center font-bold'>Steering wheel with Touch Control Buttons</h1>
                 </div>
               </div>
@@ -286,6 +247,7 @@ const C_ClassSedan = () => {
             <div className='border-b w-full border-black'></div>
           </div>
 
+     {/* Safety */}
           <div className='flex flex-col space-y-5 w-full mt-10 max-w-[1200px]' onClick={toggleSafetyImages}>
             <div className='flex justify-between '>
               <h1 className=' font-serif'>Safety</h1>
@@ -296,19 +258,19 @@ const C_ClassSedan = () => {
             {showSafetyImages && (
               <div className='grid gap-5 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={safety1} alt="" />
+                    <img className='rounded-md' src={safetyImages.safety1} alt="" />
                     <h1 className='text-center font-bold'>PRE-SAFE</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={safety2} alt="" />
+                    <img className='rounded-md' src={safetyImages.safety2} alt="" />
                     <h1 className='text-center font-bold'>PRE-SAFE Sound</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={safety3} alt="" />
+                    <img className='rounded-md' src={safetyImages.safety3} alt="" />
                     <h1 className='text-center font-bold'>ATTENTION ASSIST</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={safety4} alt="" />
+                    <img className='rounded-md' src={safetyImages.safety4} alt="" />
                     <h1 className='text-center font-bold'>Active Brake Assist</h1>
                 </div>
               </div>
@@ -316,6 +278,7 @@ const C_ClassSedan = () => {
             <div className='border-b w-full border-black'></div>
           </div>
           
+    {/* Accessories */}
           <div className='flex flex-col space-y-5 w-full mt-10 max-w-[1200px]' onClick={toggleAccessoriesImages}>
             <div className='flex justify-between '>
               <h1 className=' font-serif'>Accessories</h1>
@@ -326,32 +289,33 @@ const C_ClassSedan = () => {
             {showAccessoriesImages && (
               <div className='grid gap-5 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]'>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={accessories1} alt="" />
+                    <img className='rounded-md' src={accessoriesImages.accessories1} alt="" />
                     <h1 className='text-center font-bold'>Wheel locking bolts</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={accessories2} alt="" />
+                    <img className='rounded-md' src={accessoriesImages.accessories2} alt="" />
                     <h1 className='text-center font-bold'>Chrome door handle inserts</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={accessories3} alt="" />
+                    <img className='rounded-md' src={accessoriesImages.accessories3} alt="" />
                     <h1 className='text-center font-bold'>First-aid kit</h1>
                 </div>
                 <div className='space-y-2'>
-                    <img className='rounded-md' src={accessories4} alt="" />
+                    <img className='rounded-md' src={accessoriesImages.accessories4} alt="" />
                     <h1 className='text-center font-bold'>All-season front and rear floor mats, black rubber</h1>
                 </div>
               </div>
             )}
             <div className='border-b w-full border-black'></div>
           </div>
+
         </div>
 
         <div className='mt-10 flex flex-col'>
           <h1 className='text-2xl text-center font-medium'>Option Packages</h1>
           <div className=' gap-4 flex flex-col lg:grid-cols-2 lg:grid'>
             <div className='mt-10 w-full max-w-[450px] p-2 pb-5  rounded-md'>
-             <img src={SedanBlackBg} alt="" />
+             <img src={others.SedanBlackBg} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Premium Trim</h1>
                   <h1>Starting at $59,900*</h1>
@@ -447,7 +411,7 @@ const C_ClassSedan = () => {
              </div>
 
                <div className='mt-10 w-full max-w-[450px] p-2 pb-5 rounded-md'>
-                  <img src={SedanBlackBg} alt="" />
+                  <img src={others.SedanBlackBg} alt="" />
                  <div className='flex font-bold font-serif justify-between'>
                     <h1>Pinnacle Trim</h1>
                     <h1>Starting at $61,900*</h1>
