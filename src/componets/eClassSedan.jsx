@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import EsedanBg from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/EsedanBg.png'
 import bgRoad1 from '/src/assets/bgRoad1.jpg'
 import EsedanBg2  from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisGray.png'
-import MyButton from './myButton'
-
 
 const EClassSedan = () => {
 
@@ -30,10 +28,10 @@ const EClassSedan = () => {
       
       <div className='flex absolute flex-col mt-[450px] md:mt-[550px] gap-4 rounded-md md:gap-[30px] md:grid md:grid-cols-2 max-w-[600px] text-center'>
             <div className='border-gray-400 border whiteButton buttons md:max-w-[285px] text-xl text-black rounded-md p-2'>
-               <MyButton to='/e_ClassSedan'>LEARN MORE</MyButton>
+               <Link to='/e_ClassSedan'>LEARN MORE</Link>
            </div>
            <div className='border blackButton buttons md:max-w-[300px] text-xl text-white rounded-md p-2 '>
-               <MyButton to='/contact'>BUY NOW</MyButton>
+               <Link to='/contact'>BUY NOW</Link>
            </div>
       </div>
    </main>
