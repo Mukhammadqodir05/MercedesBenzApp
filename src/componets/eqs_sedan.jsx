@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import bgRoad2 from '/src/assets/road2.jpg'
-import EQSsedan2 from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisBlue.png'
+import EQSsedan2 from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisBlack.png'
 import EQSsedan from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/EQSsedan.png'
 
 const EQS_sedan = () => {
