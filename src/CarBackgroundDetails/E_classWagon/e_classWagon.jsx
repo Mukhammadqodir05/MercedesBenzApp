@@ -9,13 +9,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import Wagon1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon1.webp'
 import Wagon2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon2.webp'
 import irisBlack from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlack.png'
-import irisDiamond from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisDiamond.png'
 import irisWhite from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisWhite.png'
 import irisBlue from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlue.png'
 import irisSilver from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisSilver.png'
 import irisGray from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisGray.png'
-import irisCirrusSilver from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisCirrusSilver.png'
-import irisRed from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisRed.png'
 
 // Performance
 import performance1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/performance/performance1.webp'
@@ -93,9 +90,6 @@ const E_classWagon = () => {
         <SwiperSlide><img src={irisWhite} alt="" /></SwiperSlide>
         <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
         <SwiperSlide><img src={irisSilver} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={irisDiamond} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={irisRed} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={irisCirrusSilver} alt="" /></SwiperSlide>
         <SwiperSlide><img src={irisGray} alt="" /></SwiperSlide>
       </Swiper>
 
@@ -358,7 +352,7 @@ const E_classWagon = () => {
           <h1 className='text-2xl text-center font-medium'>Option Packages</h1>
           <div className=' gap-4 flex flex-col lg:grid-cols-2 lg:grid'>
             <div className='mt-10 w-full max-w-[450px] p-2 pb-5  rounded-md'>
-             <img src={irisCirrusSilver} alt="" />
+             <img src={irisSilver} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Premium Trim</h1>
                   <h1>Starting at $71,000*</h1>

@@ -13,8 +13,6 @@ import irisWhite from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisW
 import irisBlue from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisBlue.png'
 import irisSilver from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisSilver.png'
 import irisGray from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisGray.png'
-import irisDiamond from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisDiamond.png'
-import irisRed from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisRed.png'
 
 // Performance
 import performance1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/performance/performance1.webp'
@@ -92,8 +90,6 @@ const E_ClassSedan = () => {
            <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
            <SwiperSlide><img src={irisSilver} alt="" /></SwiperSlide>
            <SwiperSlide><img src={irisGray} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisDiamond} alt="" /></SwiperSlide>
-           <SwiperSlide><img src={irisRed} alt="" /></SwiperSlide>
       </Swiper>
 
 
@@ -356,7 +352,7 @@ const E_ClassSedan = () => {
           <h1 className='text-2xl text-center font-medium'>Option Packages</h1>
           <div className=' gap-4 flex flex-col lg:grid-cols-2 lg:grid'>
             <div className='mt-10 w-full max-w-[450px] p-2 pb-5  rounded-md'>
-             <img src={irisDiamond} alt="" />
+             <img src={irisSilver} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Premium Trim</h1>
                   <h1>Starting at $81,300*</h1>
@@ -452,7 +448,7 @@ const E_ClassSedan = () => {
              </div>
 
                <div className='mt-10 w-full max-w-[450px] p-2 pb-5 rounded-md'>
-                  <img src={irisRed} alt="" />
+                  <img src={irisBlue} alt="" />
                  <div className='flex font-bold font-serif justify-between'>
                     <h1>Pinnacle Trim</h1>
                     <h1>Starting at $89,900*</h1>

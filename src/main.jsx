@@ -11,7 +11,7 @@ const E_classWagon = lazy(() => import('./CarBackgroundDetails/E_classWagon/e_cl
 const EQS_sedan = lazy(() => import('./CarBackgroundDetails/EQS_sedan/eqs_sedan.jsx'));
 const Maybach_SClass = lazy(() => import('./CarBackgroundDetails/Maybach_sedan/maybach_SClass.jsx'));
 
-import { ScaleLoader } from 'react-spinners'
+import { PuffLoader } from 'react-spinners'
 
 const ScrollToTop = () => {
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <BrowserRouter>
           <ScrollToTop />
-          <Suspense fallback={<div className='flex w-full h-screen justify-center items-center '> <ScaleLoader color='#f700ff' loading='loading' size={350} /></div>}>
+          <Suspense fallback={<div className='flex w-full h-screen justify-center items-center '> <PuffLoader color='#f700ff' loading='loading' size={350} /></div>}>
               <Routes>
                   <Route path='/' element={<App />} />
                   <Route path='/contact' element={<Contact />} />

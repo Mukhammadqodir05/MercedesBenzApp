@@ -22,7 +22,7 @@ const Navbar = () => {
         <img src={logo} alt='Tesla Logo' className='h-20 cursor-pointer' />
       </div>
 
-        <ul className='hidden md:flex space-x-6'>
+        <ul className='hidden lg:flex space-x-6'>
             <li className='font-medium font-serif cursor-pointer'>
                 <Link to='main'>C Class Sedan</Link>
             </li>

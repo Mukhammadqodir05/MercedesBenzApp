@@ -7,15 +7,10 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 import irisBlack from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisBlack.png'
-import irisBlackMetallic from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisBlackMetallic.png'
 import irisBlue from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisBlue.png'
-import irisGold from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisGold.png'
-import irisGreyMetallic from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisGreyMetallic.png'
-import irisMetallic from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisMetallic.png'
 import irisNight from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisNight.png'
 import irisOlive from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisOlive.png'
 import irisRed from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisRed.png'
-import irisRedMetallic from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisRedMetallic.png'
 import Maybach1 from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/Maybach1.webp'
 import Maybach2 from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/Maybach2.webp'
 
@@ -98,14 +93,9 @@ const Maybach_SClass = () => {
           >
             <SwiperSlide><img src={irisBlack} alt="" /></SwiperSlide>
             <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisBlackMetallic} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisGold} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisGreyMetallic} alt="" /></SwiperSlide>
             <SwiperSlide><img src={irisRed} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisRedMetallic} alt="" /></SwiperSlide>
             <SwiperSlide><img src={irisNight} alt="" /></SwiperSlide>
             <SwiperSlide><img src={irisOlive} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisMetallic} alt="" /></SwiperSlide>
           </Swiper>
           
           <div className='flex flex-col  gap-2 lg:gap-40 md:grid md:grid-cols-2'>
@@ -366,7 +356,7 @@ const Maybach_SClass = () => {
            <h1 className='text-2xl text-center font-medium'>Option Packages</h1>
            <div className=' gap-4 flex flex-col lg:grid-cols-3 lg:grid'>
             <div className='mt-10 w-full max-w-[450px] p-2 pb-5 lg:max-w-[400px] rounded-md'>
-             <img src={irisMetallic} alt="" />
+             <img src={irisNight} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Premium Trim</h1>
                   <h1>Starting at $230,000*</h1>
@@ -478,7 +468,7 @@ const Maybach_SClass = () => {
              </div>
 
                <div className='mt-10 w-full max-w-[450px] lg:max-w-[400] p-2 pb-5 rounded-md'>
-                  <img src={irisGold} alt="" />
+                  <img src={irisBlue} alt="" />
                  <div className='flex font-bold font-serif justify-between'>
                     <h1>Exclusive Trim</h1>
                     <h1>Starting at $241,000*</h1>
@@ -591,7 +581,7 @@ const Maybach_SClass = () => {
                </div>
 
                <div className='mt-10 w-full max-w-[450px] p-2 pb-5 lg:max-w-[400]   rounded-md'>
-                <img src={irisNight} alt="" />
+                <img src={irisBlack} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Pinnacle Trim</h1>
                   <h1>Starting at $255,000*</h1>
