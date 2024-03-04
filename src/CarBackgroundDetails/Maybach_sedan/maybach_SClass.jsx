@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
+import Skeleton from '../../componets/skeleton';
+import { MaybachOthers } from '../../CClassImages';
 
 import irisBlack from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisBlack.png'
 import irisBlue from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisBlue.png'
@@ -73,30 +75,51 @@ const Maybach_SClass = () => {
   const toggleMultimediaImages = () => setShowMultimediaImages(!showMultimediaImages)
   const toggleSafetyImages = () =>  setShowSafetyImages(!showSafetyImages)
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
+  const [imageLoaded, setImageLoaded] = useState(false);
 
+  useEffect(() => {
+    const images = Object.values(MaybachOthers);
+    const imagePromises = images.map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = image;
+        img.onload = resolve;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setImageLoaded(true);
+    });
+  }, [MaybachOthers]);
 
 
   return (
-    <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden lg:mt-[-200px]'>
-         <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Autoplay, Pagination]}
-            className="mySwiper"
+   <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden lg:mt-[-200px]'>
+    { imageLoaded ? (
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper"
           >
-            <SwiperSlide><img src={irisBlack} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisRed} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisNight} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={irisOlive} alt="" /></SwiperSlide>
-          </Swiper>
+            <SwiperSlide><img src={MaybachOthers.irisBlackMaybach} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={MaybachOthers.irisBlueMaybach} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={MaybachOthers.irisRedMaybach} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={MaybachOthers.irisNight} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={MaybachOthers.irisOlive} alt="" /></SwiperSlide>
+        </Swiper>
+        ) : (
+          <div className='flex w-full md:h-[800px] lg:mb-[-100px] h-[400px] justify-center items-center'>
+            <Skeleton />
+          </div>
+         )}
           
           <div className='flex flex-col  gap-2 lg:gap-40 md:grid md:grid-cols-2'>
               <div className='flex text-center text-2xl font-medium'>
@@ -109,8 +132,8 @@ const Maybach_SClass = () => {
           
           <div className='lg:grid-cols-2 lg:grid flex items-center flex-col w-full max-w-[1100px]'>
             <div className='md:max-w-[800px] lg:max-w-[500px] justify-center items-center'>
-              <img  src={Maybach1} alt="" />
-              <img src={Maybach2} alt="" />
+              <img  src={MaybachOthers.Maybach1} alt="" />
+              <img src={MaybachOthers.Maybach2} alt="" />
             </div>
             <div className='flex flex-col md:max-w-[800px] lg:max-w-[460px] lg:mt-[70px] mt-[30px] rounded-md w-full bg-[#f3e6e6] pb-5 p-3'>
               <h1 className='text-center text-xl font-light font-mono'>Key Features</h1>
@@ -354,9 +377,9 @@ const Maybach_SClass = () => {
              
            <div className='mt-10 flex flex-col max-w-[1200px]'>
            <h1 className='text-2xl text-center font-medium'>Option Packages</h1>
-           <div className=' gap-4 flex flex-col lg:grid-cols-3 lg:grid'>
+            <div className=' gap-4 flex flex-col lg:grid-cols-3 lg:grid'>
             <div className='mt-10 w-full max-w-[450px] p-2 pb-5 lg:max-w-[400px] rounded-md'>
-             <img src={irisNight} alt="" />
+             <img src={MaybachOthers.irisNight} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Premium Trim</h1>
                   <h1>Starting at $230,000*</h1>
@@ -468,7 +491,7 @@ const Maybach_SClass = () => {
              </div>
 
                <div className='mt-10 w-full max-w-[450px] lg:max-w-[400] p-2 pb-5 rounded-md'>
-                  <img src={irisBlue} alt="" />
+                  <img src={MaybachOthers.irisBlueMaybach} alt="" />
                  <div className='flex font-bold font-serif justify-between'>
                     <h1>Exclusive Trim</h1>
                     <h1>Starting at $241,000*</h1>
@@ -581,7 +604,7 @@ const Maybach_SClass = () => {
                </div>
 
                <div className='mt-10 w-full max-w-[450px] p-2 pb-5 lg:max-w-[400]   rounded-md'>
-                <img src={irisBlack} alt="" />
+                <img src={MaybachOthers.irisBlackMaybach} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Pinnacle Trim</h1>
                   <h1>Starting at $255,000*</h1>

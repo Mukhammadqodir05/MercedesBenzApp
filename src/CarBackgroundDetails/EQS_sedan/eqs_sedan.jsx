@@ -1,18 +1,12 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
-
-import iriWhite from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/iriWhite.png'
-import irisBlue from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisBlue.png'
-import irisBlack from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisBlack.png'
-import irisRed from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisRed.png'
-import irisCirrusSilver from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisCirrusSilver.png'
-import EQS1 from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/EQS1.webp'
-import EQS2 from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/EQS2.webp'
+import Skeleton from '../../componets/skeleton';
+import { EQSOthers } from '../../CClassImages';
 
 // Performance
 import performance1 from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/performance/performance1.webp'
@@ -71,8 +65,27 @@ const EQS_sedan = () => {
   const toggleSafetyImages = () =>  setShowSafetyImages(!showSafetyImages)
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
 
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const images = Object.values(EQSOthers);
+    const imagePromises = images.map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = image;
+        img.onload = resolve;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setImageLoaded(true);
+    });
+  }, [EQSOthers]);
+
+
   return (
     <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden md:mt-[-100px] lg:mt-[-150px]'>
+     { imageLoaded ? (
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -86,12 +99,19 @@ const EQS_sedan = () => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-       <SwiperSlide><img src={iriWhite} alt="" /></SwiperSlide>
-       <SwiperSlide><img src={irisBlack} alt="" /></SwiperSlide>
-       <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
-       <SwiperSlide><img src={irisRed} alt="" /></SwiperSlide>
-       <SwiperSlide><img src={irisCirrusSilver} alt="" /></SwiperSlide>
+       <SwiperSlide><img src={EQSOthers.iriWhite} alt="" /></SwiperSlide>
+       <SwiperSlide><img src={EQSOthers.irisBlackEQS} alt="" /></SwiperSlide>
+       <SwiperSlide><img src={EQSOthers.irisBlueEQS} alt="" /></SwiperSlide>
+       <SwiperSlide><img src={EQSOthers.irisRed} alt="" /></SwiperSlide>
+       <SwiperSlide><img src={EQSOthers.irisCirrusSilver} alt="" /></SwiperSlide>
       </Swiper>
+      ) : (
+        <div className='flex w-full md:h-[800px] lg:mb-[-100px] h-[400px] justify-center items-center'>
+          <Skeleton />
+        </div>
+      )}
+    
+    
       <div className='flex flex-col  gap-2 lg:gap-40 md:grid md:grid-cols-2'>
           <div className='flex text-center text-2xl font-medium'>
             <h1>2023-</h1>
@@ -103,8 +123,8 @@ const EQS_sedan = () => {
       
        <div className='lg:grid-cols-2 lg:grid flex items-center flex-col w-full max-w-[1100px]'>
        <div className='md:max-w-[800px] lg:max-w-[500px] justify-center items-center'>
-         <img  src={EQS1} alt="" />
-         <img src={EQS2} alt="" />
+         <img  src={EQSOthers.EQS1} alt="" />
+         <img src={EQSOthers.EQS2} alt="" />
        </div>
        <div className='flex flex-col md:max-w-[800px] lg:max-w-[460px] lg:mt-[70px] mt-[30px] rounded-md w-full bg-[#f3e6e6] pb-5 p-3'>
          <h1 className='text-center text-xl font-light font-mono'>Key Features</h1>
@@ -337,7 +357,7 @@ const EQS_sedan = () => {
           <h1 className='text-2xl text-center font-medium'>Option Packages</h1>
           <div className=' gap-4 flex flex-col lg:grid-cols-3 lg:grid'>
             <div className='mt-10 w-full max-w-[450px] p-2 pb-5 lg:max-w-[400px] rounded-md'>
-             <img src={iriWhite} alt="" />
+             <img src={EQSOthers.iriWhite} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Premium Trim</h1>
                   <h1>Starting at $147,500*</h1>
@@ -449,7 +469,7 @@ const EQS_sedan = () => {
              </div>
 
                <div className='mt-10 w-full max-w-[450px] lg:max-w-[400] p-2 pb-5 rounded-md'>
-                  <img src={irisBlack} alt="" />
+                  <img src={EQSOthers.irisBlackEQS} alt="" />
                  <div className='flex font-bold font-serif justify-between'>
                     <h1>Exclusive Trim</h1>
                     <h1>Starting at $149,000*</h1>
@@ -561,8 +581,8 @@ const EQS_sedan = () => {
                  </div>
                </div>
 
-               <div className='mt-10 w-full max-w-[450px] p-2 pb-5 lg:max-w-[400]   rounded-md'>
-             <img src={irisCirrusSilver} alt="" />
+              <div className='mt-10 w-full max-w-[450px] p-2 pb-5 lg:max-w-[400]   rounded-md'>
+                <img src={EQSOthers.irisCirrusSilver} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Pinnacle Trim</h1>
                   <h1>Starting at $155,000*</h1>

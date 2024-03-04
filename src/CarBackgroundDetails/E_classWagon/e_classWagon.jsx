@@ -1,11 +1,12 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
-
+import Skeleton from '../../componets/skeleton';
+import { WagonOthers } from '../../CClassImages';
 import Wagon1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon1.webp'
 import Wagon2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon2.webp'
 import irisBlack from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlack.png'
@@ -70,10 +71,27 @@ const E_classWagon = () => {
   const toggleMultimediaImages = () => setShowMultimediaImages(!showMultimediaImages)
   const toggleSafetyImages = () =>  setShowSafetyImages(!showSafetyImages)
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const images = Object.values(WagonOthers);
+    const imagePromises = images.map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = image;
+        img.onload = resolve;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setImageLoaded(true);
+    });
+  }, [WagonOthers]);
 
   return (
     <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden md:mt-[-100px] lg:mt-[-150px]'>
-         <Swiper
+     { imageLoaded ? (
+      <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -86,12 +104,17 @@ const E_classWagon = () => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide><img src={irisBlack} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={irisWhite} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={irisBlue} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={irisSilver} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={irisGray} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={WagonOthers.irisBlackWagon} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={WagonOthers.irisWhiteWagon} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={WagonOthers.irisBlueWagon} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={WagonOthers.irisSilverWagon} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={WagonOthers.irisGrayWagon} alt="" /></SwiperSlide>
       </Swiper>
+       ) : (
+        <div className='flex w-full md:h-[800px] lg:mb-[-100px] h-[400px] justify-center items-center'>
+          <Skeleton />
+        </div>
+      )}
 
       <div className='flex flex-col gap-2 lg:gap-40 lg:grid lg:grid-cols-2'>
           <div className='flex text-center text-2xl font-medium'>
@@ -104,8 +127,8 @@ const E_classWagon = () => {
       
        <div className='lg:grid-cols-2 lg:grid flex items-center flex-col w-full max-w-[1100px]'>
        <div className='md:max-w-[800px] lg:max-w-[500px] justify-center items-center'>
-         <img  src={Wagon1} alt="" />
-         <img src={Wagon2} alt="" />
+         <img  src={WagonOthers.Wagon1Wagon} alt="" />
+         <img src={WagonOthers.Wagon2Wagon} alt="" />
        </div>
        <div className='flex flex-col md:max-w-[800px] lg:max-w-[460px] lg:mt-[70px] mt-[30px] rounded-md w-full bg-[#f3e6e6] pb-5 p-3'>
          <h1 className='text-center text-xl font-light font-mono'>Feature Highlights</h1>
@@ -352,7 +375,7 @@ const E_classWagon = () => {
           <h1 className='text-2xl text-center font-medium'>Option Packages</h1>
           <div className=' gap-4 flex flex-col lg:grid-cols-2 lg:grid'>
             <div className='mt-10 w-full max-w-[450px] p-2 pb-5  rounded-md'>
-             <img src={irisSilver} alt="" />
+             <img src={WagonOthers.irisSilverWagon} alt="" />
                <div className='flex font-bold font-serif justify-between'>
                   <h1>Premium Trim</h1>
                   <h1>Starting at $71,000*</h1>
@@ -448,7 +471,7 @@ const E_classWagon = () => {
              </div>
 
                <div className='mt-10 w-full max-w-[450px] p-2 pb-5 rounded-md'>
-                  <img src={irisBlue} alt="" />
+                  <img src={WagonOthers.irisBlueWagon} alt="" />
                  <div className='flex font-bold font-serif justify-between'>
                     <h1>Pinnacle Trim</h1>
                     <h1>Starting at $77,900*</h1>

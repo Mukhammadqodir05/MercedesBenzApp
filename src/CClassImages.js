@@ -43,6 +43,49 @@ import SedanSilverBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/Se
 import SedanGrayMetalicBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanGrayMetalicBg.png'
 import SedanBlueBg from '/src/CarBackgroundDetails/C_classSedan/SedanImages/SedanBlueBg.png'
 
+// E Class other images
+import E_sedan1 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/E_sedan1.webp'
+import E_sedan2 from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/E_sedan2.webp'
+import irisBlack from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisBlack.png'
+import irisWhite from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisWhite.png'
+import irisBlue from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisBlue.png'
+import irisSilver from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisSilver.png'
+import irisGray from '/src/CarBackgroundDetails/E_classSedan/ESedanImages/irisGray.png'
+const EClassOthers = { E_sedan1, E_sedan2, irisBlack, irisWhite, irisBlue, irisSilver, irisGray };
+
+
+// Wagon other images
+import Wagon1 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon1.webp'
+import Wagon2 from '/src/CarBackgroundDetails/E_classWagon/WagonImages/Wagon2.webp'
+import irisBlackWagon from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlack.png'
+import irisWhiteWagon from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisWhite.png'
+import irisBlueWagon from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisBlue.png'
+import irisSilverWagon from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisSilver.png'
+import irisGrayWagon from '/src/CarBackgroundDetails/E_classWagon/WagonImages/irisGray.png'
+const WagonOthers = { Wagon1, Wagon2, irisBlackWagon, irisWhiteWagon, irisBlueWagon, irisSilverWagon, irisGrayWagon };
+
+
+// EQS other images
+import iriWhite from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/iriWhite.png'
+import irisBlueEQS from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisBlue.png'
+import irisBlackEQS from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisBlack.png'
+import irisRed from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisRed.png'
+import irisCirrusSilver from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/irisCirrusSilver.png'
+import EQS1 from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/EQS1.webp'
+import EQS2 from '/src/CarBackgroundDetails/EQS_sedan/EQSimages/EQS2.webp'
+const EQSOthers = { iriWhite, irisBlueEQS, irisBlackEQS, irisRed, irisCirrusSilver, EQS1, EQS2 };
+
+// Maybach other images
+import irisBlackMaybach from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisBlack.png'
+import irisBlueMaybach from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisBlue.png'
+import irisNight from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisNight.png'
+import irisOlive from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisOlive.png'
+import irisRedMaybach from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/irisRed.png'
+import Maybach1 from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/Maybach1.webp'
+import Maybach2 from '/src/CarBackgroundDetails/Maybach_sedan/maybachImages/Maybach2.webp'
+const MaybachOthers = { irisBlackMaybach, irisBlueMaybach, irisNight, irisOlive, irisRedMaybach, Maybach1, Maybach2 };
+
+
 const performanceImages = { performance1, performance2, performance3, performance4 };
 const designImages = { design1, design2, design3, design4 };
 const luxuryImages = { luxury1, luxury2, luxury3, luxury4 };
@@ -51,4 +94,4 @@ const accessoriesImages = { accessories1, accessories2, accessories3, accessorie
 const safetyImages = { safety1, safety2, safety3, safety4 };
 const others = { C_ClassSedan1, C_ClassSedan2, SedanBlackBg, SedanWhiteBg, SedanSilverBg, SedanGrayMetalicBg, SedanBlueBg }
 
-export { performanceImages, designImages, luxuryImages, multimediaImages, accessoriesImages, safetyImages, others };
+export { MaybachOthers, EQSOthers, WagonOthers, EClassOthers, performanceImages, designImages, luxuryImages, multimediaImages, accessoriesImages, safetyImages, others };

@@ -133,7 +133,6 @@ html {
   animation: rotateMenu 500ms ease-in-out forwards;
   transform-origin: top center;
 }
-  
 
 
 .gradient-text {
@@ -144,3 +143,20 @@ html {
   padding-bottom: 10px; 
 }
 
+.skeleton-row {
+  height: 40px;
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(90deg, #e8e8e8 0%, #e8e8e8 50%, #fff 50%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 1s infinite linear;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}

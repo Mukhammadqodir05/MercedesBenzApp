@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { performanceImages, designImages, luxuryImages, multimediaImages, accessoriesImages, safetyImages, others } from '../../CClassImages';
+import Skeleton from '../../componets/skeleton';
 
 const C_ClassSedan = () => {
   const [showPerformanceImages, setShowPerformanceImages] = useState(false);
@@ -25,29 +26,62 @@ const C_ClassSedan = () => {
   const toggleSafetyImages = () =>  setShowSafetyImages(!showSafetyImages)
   const toggleAccessoriesImages = () =>  setShowAccessoriesImages(!showAccessoriesImages)
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageLoaded2, setImageLoaded2] = useState(false);
+
+  useEffect(() => {
+    const images = Object.values(others);
+    const imagePromises = images.map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = image;
+        img.onload = resolve;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setImageLoaded(true);
+    });
+  }, [others]);
+
 
   return (
     <main className='flex flex-col h-full w-full items-center justify-center pb-20 p-3 overflow-hidden md:mt-[-100px] lg:mt-[-150px]'>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide> <img src={others.SedanBlackBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={others.SedanWhiteBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={others.SedanGrayMetalicBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={others.SedanSilverBg} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={others.SedanBlueBg} alt="" /></SwiperSlide>
-      </Swiper>
+     { imageLoaded ? (
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src={others.SedanBlackBg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={others.SedanWhiteBg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={others.SedanGrayMetalicBg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={others.SedanSilverBg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={others.SedanBlueBg} alt="" />
+          </SwiperSlide>
+        </Swiper>
+      ) : (
+        <div className='flex w-full md:h-[800px] lg:mb-[-100px] h-[400px] justify-center items-center'>
+          <Skeleton />
+        </div>
+      )}
+    
+
       
        <div className='flex flex-col gap-2 lg:gap-40 lg:grid lg:grid-cols-2'>
           <div className='flex text-center text-2xl font-medium'>
